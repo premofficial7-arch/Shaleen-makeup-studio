@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title id="page-title">Yanshika Makeover | Beauty Parlour Rohtak</title>
+
+<!-- DNS/connection warm-up -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="dns-prefetch" href="https://www.youtube.com"/>
+<link rel="dns-prefetch" href="https://images.unsplash.com"/>
+
+<!-- Preload hero image (first paint) -->
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"/>
+
+<!-- Non-blocking font load -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/></noscript>
+
+<style>
+/* ── FONT SWAP ── */
+@font-face{font-family:'Cormorant Garamond';font-display:swap;src:local('Cormorant Garamond')}
+@font-face{font-family:'Jost';font-display:swap;src:local('Jost')}
+
+/* ── VARIABLES & RESET ── */
+:root{--gold:#C9A96E;--gold-light:#E8D5B0;--dark:#1A1410;--dark2:#2C2318;--cream:#FAF6F0;--text:#4A3F35;--rose:#D4A0A0}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
+
+/* ── FAB CALL ── */
+.fab-call{position:fixed;bottom:28px;right:28px;z-index:9997;display:flex;align-items:center;gap:10px;padding:16px 28px;border-radius:50px;text-decoration:none;font-family:'Jost',sans-serif;font-size:14px;font-weight:500;letter-spacing:.5px;color:#fff;background:#e53935;box-shadow:0 8px 32px rgba(229,57,53,.45);transition:all .3s ease;white-space:nowrap;animation:callPulse 2.5s ease-in-out infinite}
+.fab-call:hover{transform:translateY(-3px);background:#c62828;box-shadow:0 14px 40px rgba(229,57,53,.55);animation:none}
+@keyframes callPulse{0%,100%{box-shadow:0 8px 32px rgba(229,57,53,.45)}50%{box-shadow:0 8px 48px rgba(229,57,53,.7),0 0 0 8px rgba(229,57,53,.12)}}
+.fab-call .call-icon{font-size:20px;line-height:1}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px 60px;background:rgba(250,246,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,169,110,.2);transition:all .3s}
+nav .logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--dark);letter-spacing:2px;text-decoration:none}
+nav .logo span{color:var(--gold)}
+nav ul{list-style:none;display:flex;gap:36px}
+nav ul a{text-decoration:none;color:var(--text);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:400;transition:color .2s}
+nav ul a:hover{color:var(--gold)}
+.nav-cta{background:var(--dark);color:#fff!important;padding:10px 22px;border-radius:2px;letter-spacing:2px!important}
+.nav-cta:hover{background:var(--gold)!important;color:#fff!important}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:88px}
+.hero-css-bg{position:absolute;inset:0;z-index:0;background:#1a1410;overflow:hidden}
+.hero-css-bg .grad-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55}
+.orb1{width:600px;height:600px;background:radial-gradient(circle,#c9a96e 0%,transparent 70%);top:-150px;left:-100px;animation:orbFloat1 9s ease-in-out infinite}
+.orb2{width:500px;height:500px;background:radial-gradient(circle,#8b5e52 0%,transparent 70%);bottom:-100px;right:-80px;animation:orbFloat2 11s ease-in-out infinite}
+.orb3{width:350px;height:350px;background:radial-gradient(circle,#d4a0a0 0%,transparent 70%);top:40%;left:55%;animation:orbFloat3 13s ease-in-out infinite}
+.orb4{width:250px;height:250px;background:radial-gradient(circle,#e8d5b0 0%,transparent 70%);top:20%;right:20%;animation:orbFloat1 7s ease-in-out infinite reverse;opacity:.3}
+@keyframes orbFloat1{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(60px,-40px) scale(1.08)}66%{transform:translate(-30px,50px) scale(.95)}}
+@keyframes orbFloat2{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(-50px,30px) scale(1.1)}70%{transform:translate(40px,-60px) scale(.92)}}
+@keyframes orbFloat3{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.15) rotate(20deg)}}
+.hero-css-bg .particle{position:absolute;border-radius:50%;background:var(--gold);opacity:0;animation:particleRise linear infinite}
+@keyframes particleRise{0%{transform:translateY(0) scale(1);opacity:0}10%{opacity:.6}90%{opacity:.2}100%{transform:translateY(-110vh) scale(.3);opacity:0}}
+.hero-css-bg .shimmer-line{position:absolute;width:1px;background:linear-gradient(to bottom,transparent,rgba(201,169,110,.4),transparent);animation:shimmerFade 4s ease-in-out infinite}
+@keyframes shimmerFade{0%,100%{opacity:0;transform:scaleY(.5)}50%{opacity:1;transform:scaleY(1)}}
+.hero-video-bg{position:absolute;inset:0;z-index:1;overflow:hidden}
+.hero-video-bg iframe{position:absolute;top:50%;left:50%;width:177.78vh;height:100vh;min-width:100%;min-height:56.25vw;transform:translate(-50%,-50%);pointer-events:none;border:none}
+.hero-video-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,20,16,.78) 0%,rgba(26,20,16,.50) 50%,rgba(26,20,16,.30) 100%);z-index:2}
+.hero-left{position:relative;z-index:3;width:100%;max-width:700px;padding:80px 80px}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:28px;font-weight:500}
+.hero-tag::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,5vw,80px);font-weight:300;line-height:1.05;color:#fff;margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-desc{font-size:15px;line-height:1.8;color:rgba(255,255,255,.75);max-width:460px;margin-bottom:44px;font-weight:300}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{background:#25D366;color:#fff;padding:16px 36px;text-decoration:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;border-radius:50px;transition:all .3s;border:2px solid #25D366;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:#1ebe59;border-color:#1ebe59;transform:translateY(-2px)}
+.btn-call-hero{background:#e53935;color:#fff;padding:16px 36px;text-decoration:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;border-radius:50px;border:2px solid #e53935;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-call-hero:hover{background:#c62828;border-color:#c62828;transform:translateY(-2px)}
+.btn-directions{background:transparent;color:rgba(255,255,255,.9);padding:16px 36px;text-decoration:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;border-radius:50px;border:2px solid rgba(255,255,255,.4);transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-directions:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+
+/* ── MARQUEE ── */
+.marquee-strip{background:var(--dark);padding:18px 0;overflow:hidden;white-space:nowrap}
+.marquee-inner{display:inline-flex;animation:marquee 22s linear infinite}
+.marquee-item{display:inline-flex;align-items:center;gap:24px;padding:0 40px;color:rgba(255,255,255,.5);font-size:11px;letter-spacing:3px;text-transform:uppercase}
+.marquee-item span{color:var(--gold);font-size:16px}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── SERVICES ── */
+.services{padding:120px 80px;background:var(--cream)}
+.section-header{text-align:center;margin-bottom:70px}
+.section-tag{color:var(--gold);font-size:11px;letter-spacing:4px;text-transform:uppercase;font-weight:500;margin-bottom:14px;display:block}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,4vw,56px);font-weight:300;color:var(--dark);line-height:1.1}
+.section-title em{font-style:italic;color:var(--gold)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.service-card{position:relative;overflow:hidden;min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;cursor:default;border-radius:4px;transition:transform .4s ease,box-shadow .4s ease}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.service-card-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s ease}
+.service-card:hover .service-card-bg{transform:scale(1.08)}
+.service-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,20,16,.96) 0%,rgba(26,20,16,.55) 50%,rgba(26,20,16,.15) 100%);transition:background .4s ease}
+.service-card:hover .service-card-overlay{background:linear-gradient(to top,rgba(26,20,16,.98) 0%,rgba(26,20,16,.72) 55%,rgba(26,20,16,.25) 100%)}
+.service-card-content{position:relative;z-index:2;padding:36px 32px}
+.service-icon{font-size:36px;margin-bottom:14px;display:block;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5))}
+.service-card h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:#fff;margin-bottom:10px;line-height:1.2}
+.service-card p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.78);margin-bottom:16px;font-weight:300;transform:translateY(8px);opacity:0;transition:opacity .4s ease,transform .4s ease}
+.service-card:hover p{transform:translateY(0);opacity:1}
+.service-price{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);font-weight:400;display:inline-block;padding:4px 12px;background:rgba(201,169,110,.15);border:1px solid rgba(201,169,110,.35);border-radius:2px}
+
+/* ── ABOUT ── */
+.about{display:grid;grid-template-columns:1fr 1fr;min-height:600px}
+.about-img{position:relative;overflow:hidden;min-height:500px;background:linear-gradient(135deg,#e8d5c4,#d4b896);display:flex;align-items:center;justify-content:center}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-content{background:var(--dark2);padding:100px 80px;display:flex;flex-direction:column;justify-content:center}
+.about-content .section-tag{text-align:left}
+.about-content .section-title{text-align:left;margin-bottom:28px}
+.about-content p{color:rgba(255,255,255,.6);font-size:15px;line-height:1.85;font-weight:300;margin-bottom:20px}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:44px;padding-top:44px;border-top:1px solid rgba(201,169,110,.2)}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:48px;color:var(--gold);font-weight:300;line-height:1;display:block}
+.stat-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:6px;display:block}
+
+/* ── REVIEWS ── */
+.reviews{padding:120px 80px;background:var(--cream)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:60px}
+.review-card{background:#fff;padding:40px 36px;border-radius:2px;position:relative;box-shadow:0 4px 30px rgba(0,0,0,.05);transition:transform .3s ease,box-shadow .3s ease}
+.review-card:hover{transform:translateY(-6px);box-shadow:0 16px 50px rgba(0,0,0,.1)}
+.review-card::before{content:'\201C';font-family:'Cormorant Garamond',serif;font-size:80px;color:var(--gold-light);position:absolute;top:16px;left:28px;line-height:1}
+.review-stars{color:var(--gold);font-size:15px;margin-bottom:16px;margin-top:30px}
+.review-text{font-size:14px;line-height:1.8;color:var(--text);font-weight:300;font-style:italic;margin-bottom:24px}
+.review-author{display:flex;align-items:center;gap:14px}
+.review-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold-light),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;font-weight:600;flex-shrink:0}
+.review-name{font-weight:500;font-size:14px;color:var(--dark)}
+.review-date{font-size:11px;color:#aaa;letter-spacing:1px;margin-top:2px}
+
+/* ── GALLERY ── */
+.gallery{padding:0 0 120px;background:var(--cream)}
+.gallery-title-wrap{padding:0 80px;margin-bottom:48px;text-align:center}
+.gallery-slider-wrap{position:relative;max-width:300px;width:100%;margin:0 auto;padding:0;overflow:hidden;cursor:grab;user-select:none;border-radius:24px;box-shadow:0 40px 100px rgba(0,0,0,.35),0 0 0 1px rgba(201,169,110,.18)}
+.gallery-slider-wrap:active{cursor:grabbing}
+.gallery-slider{display:flex;transition:transform .7s cubic-bezier(.4,0,.2,1);will-change:transform}
+.gallery-slider.is-dragging{transition:none}
+.gallery-slide{min-width:100%;aspect-ratio:9/16;max-height:70vh;position:relative;overflow:hidden;border-radius:24px;flex-shrink:0}
+.gallery-slide img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:24px;pointer-events:none}
+.gallery-slide-caption{display:none}
+.gallery-arrow{display:none}
+.gallery-dots{display:flex;justify-content:center;gap:10px;margin-top:24px}
+.gallery-dot{width:8px;height:8px;border-radius:50%;background:rgba(201,169,110,.3);border:1px solid rgba(201,169,110,.5);cursor:pointer;transition:all .25s}
+.gallery-dot.active{background:var(--gold);border-color:var(--gold);transform:scale(1.3)}
+
+/* ── BOOKING / CONTACT ── */
+.booking{background:var(--dark);padding:120px 80px;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}
+.booking-left .section-tag{text-align:left}
+.booking-left .section-title{color:#fff;text-align:left;margin-bottom:28px}
+.booking-left p{color:rgba(255,255,255,.5);font-size:15px;line-height:1.8;font-weight:300;margin-bottom:40px}
+.contact-info{display:flex;flex-direction:column;gap:20px}
+.contact-row{display:flex;align-items:flex-start;gap:16px;color:rgba(255,255,255,.7);font-size:14px;line-height:1.6}
+.contact-icon{color:var(--gold);font-size:18px;min-width:24px;margin-top:2px}
+.contact-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px}
+.contact-action-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:14px 28px;border-radius:50px;text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.5px;transition:all .3s}
+.btn-wa:hover{background:#1ebe59;transform:translateY(-2px)}
+.btn-call{display:inline-flex;align-items:center;gap:8px;background:#e53935;color:#fff;padding:14px 28px;border-radius:50px;text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.5px;transition:all .3s}
+.btn-call:hover{background:#c62828;transform:translateY(-2px)}
+.btn-dir{display:inline-flex;align-items:center;gap:8px;background:#4285F4;color:#fff;padding:14px 28px;border-radius:50px;text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.5px;transition:all .3s}
+.btn-dir:hover{background:#3367d6;transform:translateY(-2px)}
+.booking-form{background:rgba(255,255,255,.04);border:1px solid rgba(201,169,110,.2);border-radius:4px;padding:48px 40px}
+.booking-form h3{font-family:'Cormorant Garamond',serif;color:#fff;font-size:28px;font-weight:300;margin-bottom:32px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:2px;padding:12px 16px;color:#fff;font-family:'Jost',sans-serif;font-size:14px;outline:none;transition:border-color .2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group select option{background:var(--dark2)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.btn-book{width:100%;background:#25D366;color:#fff;border:none;padding:16px;font-family:'Jost',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-radius:50px;margin-top:8px;transition:background .3s}
+.btn-book:hover{background:#1ebe59}
+
+/* ── FOOTER ── */
+footer{background:#111009;padding:60px 80px 32px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;border-top:1px solid rgba(201,169,110,.1)}
+footer .footer-logo{font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;font-weight:300;letter-spacing:2px;margin-bottom:16px}
+footer .footer-logo span{color:var(--gold)}
+footer p{color:rgba(255,255,255,.35);font-size:13px;line-height:1.7;font-weight:300}
+footer h4{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:500}
+footer ul{list-style:none}
+footer ul li{margin-bottom:10px}
+footer ul a{color:rgba(255,255,255,.4);text-decoration:none;font-size:13px;transition:color .2s}
+footer ul a:hover{color:var(--gold)}
+.footer-bottom{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;color:rgba(255,255,255,.2);font-size:12px}
+.footer-social{display:flex;gap:16px;margin-top:20px}
+.footer-social a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.06);color:rgba(255,255,255,.5);text-decoration:none;font-size:16px;transition:all .2s}
+.footer-social a:hover{background:var(--gold);color:#fff}
+.hours-table{width:100%}
+.hours-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px;color:rgba(255,255,255,.4)}
+.hours-row span:last-child{color:rgba(255,255,255,.25)}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{opacity:0;animation:fadeUp .8s ease forwards}
+.delay-1{animation-delay:.15s}
+.delay-2{animation-delay:.3s}
+.delay-3{animation-delay:.45s}
+.delay-4{animation-delay:.6s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:18px 24px}
+  nav ul{display:none}
+  .hero-left{padding:60px 24px}
+  .services{padding:80px 24px}
+  .services-grid{grid-template-columns:1fr;gap:12px}
+  .service-card{min-height:300px}
+  .about{grid-template-columns:1fr}
+  .about-img{min-height:280px}
+  .about-content{padding:60px 24px}
+  .reviews{padding:80px 24px}
+  .reviews-grid{grid-template-columns:1fr}
+  .gallery{padding-bottom:80px}
+  .gallery-title-wrap{padding:0 24px}
+  .gallery-slider-wrap{margin:0 16px;max-width:100%;border-radius:20px}
+  .gallery-slide{border-radius:20px;max-height:65vh}
+  .booking{grid-template-columns:1fr;padding:80px 24px;gap:60px}
+  footer{grid-template-columns:1fr 1fr;padding:60px 24px 32px;gap:40px}
+  .fab-call{bottom:20px;right:16px;padding:14px 20px;font-size:13px}
+  .contact-action-btns{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+  ✅ BUSINESS CONFIG — EDIT ONLY THIS SECTION FOR EACH PARLOUR
+  ============================================================ -->
+<script>
+const BIZ = {
+  name:         "Yanshika",
+  nameSuffix:   "Makeover",
+  city:         "Rohtak",
+  state:        "Haryana",
+  tagline:      "Rohtak's Most Loved Beauty Parlour",
+  heroDesc:     "Experience expert beauty treatments at Yanshika Makeover, Rohtak's most-loved beauty parlour. From stunning bridal makeovers to everyday glam, we craft looks that reveal your true beauty.",
+  ratingTag:    "⭐ 4.9 Rated",
+  addressLine1: "Azad Garh Rd, Azad Garh, Rajendra Nagar",
+  addressLine2: "Rohtak, Haryana 124001",
+  phone:        "+919350837392",
+  phoneDisplay: "+91 93508 37392",
+  email:        "yanshikamakeover@gmail.com",
+  whatsappMsg:  "Hi Yanshika Makeover! I would like to book an appointment.",
+  googleMapsURL:"https://share.google/ZU2SpgsQCgpIg26f0",
+  footerTagline:"Rohtak's most-loved beauty parlour. Transforming looks, boosting confidence, one makeover at a time.",
+  year:         "2025",
+};
+// ============================================================
+// 🚫 DO NOT EDIT BELOW THIS LINE
+// ============================================================
+document.addEventListener("DOMContentLoaded", function() {
+  var fullName  = BIZ.name + " " + BIZ.nameSuffix;
+  var phoneHref = "tel:" + BIZ.phone;
+  var waHref    = "https://wa.me/" + BIZ.phone.replace("+","") + "?text=" + encodeURIComponent(BIZ.whatsappMsg);
+
+  document.title = fullName + " | Beauty Parlour " + BIZ.city;
+
+  var navLogo = document.getElementById("nav-logo");
+  if (navLogo) navLogo.textContent = BIZ.name;
+  var navBookLink = document.querySelector(".nav-cta");
+  if (navBookLink) navBookLink.href = waHref;
+
+  var ht1 = document.getElementById("hero-title-line1");
+  var ht2 = document.getElementById("hero-title-line2");
+  var ht3 = document.getElementById("hero-title-line3");
+  if (ht1) ht1.textContent = BIZ.city + "'s Most";
+  if (ht2) ht2.textContent = "Loved Beauty";
+  if (ht3) ht3.textContent = "Parlour";
+  var hd = document.getElementById("hero-desc");
+  if (hd) hd.textContent = BIZ.heroDesc;
+  var heroTag = document.querySelector(".hero-tag");
+  if (heroTag) heroTag.textContent = BIZ.ratingTag + " · " + BIZ.city + ", " + BIZ.state;
+
+  var waBtn = document.querySelector(".btn-primary");
+  if (waBtn) waBtn.href = waHref;
+  document.querySelectorAll(".btn-call-hero, .fab-call").forEach(function(b){ b.href = phoneHref; });
+  document.querySelectorAll(".btn-directions, .btn-dir").forEach(function(b){ b.href = BIZ.googleMapsURL; });
+
+  var ca = document.getElementById("contact-address");
+  if (ca) ca.textContent = BIZ.addressLine1;
+  var cc = document.getElementById("contact-city");
+  if (cc) cc.textContent = BIZ.addressLine2;
+  var cp = document.getElementById("contact-phone");
+  if (cp){ cp.textContent = BIZ.phoneDisplay; cp.href = phoneHref; }
+  var ce = document.getElementById("contact-email");
+  if (ce) ce.textContent = BIZ.email;
+
+  var waAction = document.querySelector(".btn-wa");
+  if (waAction) waAction.href = waHref;
+  var callAction = document.querySelector(".btn-call");
+  if (callAction) callAction.href = phoneHref;
+
+  var fl = document.getElementById("footer-logo-name");
+  if (fl) fl.textContent = BIZ.name;
+  var fa = document.getElementById("footer-address");
+  if (fa) fa.textContent = BIZ.addressLine1 + ", " + BIZ.addressLine2;
+  var fc = document.getElementById("footer-copy");
+  if (fc) fc.textContent = "© " + BIZ.year + " " + fullName + ". All rights reserved. · " + BIZ.city + ", " + BIZ.state;
+
+  var fsLinks = document.querySelectorAll(".footer-social a");
+  if (fsLinks[0]) fsLinks[0].href = waHref;
+  if (fsLinks[1]) fsLinks[1].href = BIZ.googleMapsURL;
+  if (fsLinks[2]) fsLinks[2].href = phoneHref;
+
+  document.querySelectorAll("footer a[href^='tel']").forEach(function(a){
+    a.href = phoneHref;
+    a.textContent = BIZ.phoneDisplay;
+  });
+
+  var footerP = document.querySelector("footer > div:first-child > p:first-of-type");
+  if (footerP) footerP.textContent = BIZ.footerTagline;
+
+  window.bookViaWhatsApp = function(form) {
+    var fname   = form.querySelector("input[type=text]").value || "";
+    var service = form.querySelector("select").value || "a service";
+    var msg     = encodeURIComponent("Hi " + fullName + "! My name is " + fname + ". I would like to book " + service + ". Please let me know the available slots.");
+    window.open("https://wa.me/" + BIZ.phone.replace("+","") + "?text=" + msg, "_blank");
+  };
+});
+</script>
+
+<!-- CALL NOW FLOATING BUTTON -->
+<a href="tel:+919350837392" class="fab-call" title="Call Now">
+  <span class="call-icon">📞</span> Call Now
+</a>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo"><span id="nav-logo">Yanshika</span> Makeover</a>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="https://wa.me/919350837392?text=Hi%20Yanshika%20Makeover!%20I%20would%20like%20to%20book%20an%20appointment." class="nav-cta" target="_blank" rel="noopener">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-css-bg">
+    <div class="grad-orb orb1"></div>
+    <div class="grad-orb orb2"></div>
+    <div class="grad-orb orb3"></div>
+    <div class="grad-orb orb4"></div>
+    <div class="shimmer-line" style="left:15%;height:40%;top:30%;animation-delay:0s;"></div>
+    <div class="shimmer-line" style="left:35%;height:60%;top:10%;animation-delay:1.2s;"></div>
+    <div class="shimmer-line" style="left:60%;height:45%;top:20%;animation-delay:2.5s;"></div>
+    <div class="shimmer-line" style="left:80%;height:55%;top:15%;animation-delay:.8s;"></div>
+    <div class="shimmer-line" style="left:92%;height:35%;top:35%;animation-delay:3.2s;"></div>
+  </div>
+  <div class="hero-video-bg">
+    <iframe
+      src="https://www.youtube.com/embed/tM37vNcvOPo?autoplay=1&mute=1&loop=1&playlist=tM37vNcvOPo&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      loading="lazy"
+      title="Yanshika Makeover Beauty Studio">
+    </iframe>
+  </div>
+  <div class="hero-video-overlay"></div>
+  <div class="hero-left">
+    <div class="hero-tag fade-up">⭐ 4.9 Rated · Rohtak, Haryana</div>
+    <h1 class="fade-up delay-1">
+      <span id="hero-title-line1">Rohtak's Most</span><br>
+      <em id="hero-title-line2">Loved Beauty</em><br>
+      <span id="hero-title-line3">Parlour</span>
+    </h1>
+    <p class="hero-desc fade-up delay-2" id="hero-desc">Experience expert beauty treatments at Yanshika Makeover, Rohtak's most-loved beauty parlour. From stunning bridal makeovers to everyday glam, we craft looks that reveal your true beauty.</p>
+    <div class="hero-btns fade-up delay-3">
+      <a href="https://wa.me/919350837392?text=Hi%20Yanshika%20Makeover!%20I%20would%20like%20to%20book%20an%20appointment." class="btn-primary" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      <a href="tel:+919350837392" class="btn-call-hero">📞 Call Now</a>
+      <a href="https://share.google/ZU2SpgsQCgpIg26f0" class="btn-directions" target="_blank" rel="noopener">📍 Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <div class="marquee-item">Hair Styling <span>✦</span></div>
+    <div class="marquee-item">Bridal Makeovers <span>✦</span></div>
+    <div class="marquee-item">Skin Treatments <span>✦</span></div>
+    <div class="marquee-item">Nail Art <span>✦</span></div>
+    <div class="marquee-item">Waxing &amp; Threading <span>✦</span></div>
+    <div class="marquee-item">Facials &amp; Cleanup <span>✦</span></div>
+    <div class="marquee-item">Makeup Studio <span>✦</span></div>
+    <div class="marquee-item">Hair Coloring <span>✦</span></div>
+    <div class="marquee-item">Hair Styling <span>✦</span></div>
+    <div class="marquee-item">Bridal Makeovers <span>✦</span></div>
+    <div class="marquee-item">Skin Treatments <span>✦</span></div>
+    <div class="marquee-item">Nail Art <span>✦</span></div>
+    <div class="marquee-item">Waxing &amp; Threading <span>✦</span></div>
+    <div class="marquee-item">Facials &amp; Cleanup <span>✦</span></div>
+    <div class="marquee-item">Makeup Studio <span>✦</span></div>
+    <div class="marquee-item">Hair Coloring <span>✦</span></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header">
+    <span class="section-tag">What We Offer</span>
+    <h2 class="section-title">Our <em>Services</em></h2>
+  </div>
+  <div class="services-grid">
+
+    <!-- Hair Styling — first card: bg loaded immediately (above fold on many screens) -->
+    <div class="service-card">
+      <div class="service-card-bg" style="background-image:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80');"></div>
+      <div class="service-card-overlay"></div>
+      <div class="service-card-content">
+        <span class="service-icon">✂️</span>
+        <h3>Hair Styling</h3>
+        <p>Cut, color, keratin, and beyond. Our stylists are trained in the latest techniques to give you the perfect look for every occasion.</p>
+        <div class="service-price">Starting ₹499</div>
+      </div>
+    </div>
+
+    <!-- Remaining cards: lazy-loaded via data-bg -->
+    <div class="service-card">
+      <div class="service-card-bg" data-bg="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"></div>
+      <div class="service-card-overlay"></div>
+      <div class="service-card-content">
+        <span class="service-icon">✨</span>
+        <h3>Skin &amp; Facials</h3>
+        <p>Deep cleanse, brightening, and glow treatments using premium products tailored to your skin type for a radiant complexion.</p>
+        <div class="service-price">Starting ₹699</div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-bg" data-bg="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80"></div>
+      <div class="service-card-overlay"></div>
+      <div class="service-card-content">
+        <span class="service-icon">💅</span>
+        <h3>Nail Studio</h3>
+        <p>Manicures, pedicures, gel nails, and nail art. From classic to bold — we create stunning nail looks for every occasion.</p>
+        <div class="service-price">Starting ₹299</div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-bg" data-bg="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"></div>
+      <div class="service-card-overlay"></div>
+      <div class="service-card-content">
+        <span class="service-icon">👰</span>
+        <h3>Bridal Makeovers</h3>
+        <p>Complete bridal transformations including hair, makeup, mehendi coordination, and pre-bridal skin prep packages for your big day.</p>
+        <div class="service-price">Starting ₹4,999</div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-bg" data-bg="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80"></div>
+      <div class="service-card-overlay"></div>
+      <div class="service-card-content">
+        <span class="service-icon">🌿</span>
+        <h3>Waxing &amp; Threading</h3>
+        <p>Gentle, precise hair removal using premium waxes and expert threading for clean, smooth, long-lasting results.</p>
+        <div class="service-price">Starting ₹149</div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-bg" data-bg="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80"></div>
+      <div class="service-card-overlay"></div>
+      <div class="service-card-content">
+        <span class="service-icon">💄</span>
+        <h3>Makeup Studio</h3>
+        <p>Party, event, and professional makeup by our certified artists. HD makeup, airbrush, and traditional styles — all available.</p>
+        <div class="service-price">Starting ₹999</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-img">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,#e8d0bc,#c9a96e);display:flex;align-items:center;justify-content:center;">
+      <div style="text-align:center;color:rgba(255,255,255,.8);">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:72px;line-height:1;">✦</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;margin-top:12px;letter-spacing:3px;">Yanshika</div>
+        <div style="font-size:11px;letter-spacing:6px;text-transform:uppercase;margin-top:8px;opacity:.7;">Makeover</div>
+        <div style="font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-top:16px;opacity:.6;">Rohtak, Haryana</div>
+      </div>
+    </div>
+  </div>
+  <div class="about-content">
+    <span class="section-tag">Our Story</span>
+    <h2 class="section-title">Beauty is Our <em>Passion</em></h2>
+    <p id="about-text">Yanshika Makeover is Rohtak's premier beauty destination with a 4.9-star reputation built on trust and artistry. Our expert team specializes in bridal makeovers, hair styling, and complete beauty transformations, ensuring every client leaves feeling radiant and confident.</p>
+    <p>Located in Rajendra Nagar, Rohtak, our studio blends modern techniques with a warm, welcoming environment — because you deserve both exceptional results and an exceptional experience.</p>
+    <div class="about-stats">
+      <div>
+        <span class="stat-num" id="stat-years">5+</span>
+        <span class="stat-label">Years of Experience</span>
+      </div>
+      <div>
+        <span class="stat-num" id="stat-clients">1,000+</span>
+        <span class="stat-label">Happy Clients</span>
+      </div>
+      <div>
+        <span class="stat-num">4.9★</span>
+        <span class="stat-label">Google Rating</span>
+      </div>
+      <div>
+        <span class="stat-num">101+</span>
+        <span class="stat-label">Google Reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <span class="section-tag">Client Love</span>
+    <h2 class="section-title">What They <em>Say</em></h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" id="r1-text">"Yanshika Makeover is the best parlour in Rohtak! My bridal look was absolutely stunning. Everyone complimented me on my special day."</p>
+      <div class="review-author">
+        <div class="review-avatar" id="r1-avatar">N</div>
+        <div>
+          <div class="review-name" id="r1-name">Neha Sharma</div>
+          <div class="review-date">2 weeks ago · Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" id="r2-text">"Amazing service and very skilled artists. I got my hair and makeup done here and the results were incredible. Highly recommend!"</p>
+      <div class="review-author">
+        <div class="review-avatar" id="r2-avatar">P</div>
+        <div>
+          <div class="review-name" id="r2-name">Priya Yadav</div>
+          <div class="review-date">1 month ago · Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" id="r3-text">"I've visited many parlours but Yanshika Makeover stands out. The staff is professional, hygienic, and the results are always perfect."</p>
+      <div class="review-author">
+        <div class="review-avatar" id="r3-avatar">R</div>
+        <div>
+          <div class="review-name" id="r3-name">Ritu Malik</div>
+          <div class="review-date">3 weeks ago · Google Review</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section" style="padding:120px 80px;background:var(--dark2);text-align:center;">
+  <span class="section-tag" style="color:var(--gold);">See Us In Action</span>
+  <h2 class="section-title" style="color:#fff;margin-bottom:16px;">Watch Our <em>Studio</em></h2>
+  <p style="color:rgba(255,255,255,.45);font-size:15px;font-weight:300;max-width:520px;margin:0 auto 56px;line-height:1.8;">Step inside Yanshika Makeover. Watch how we transform looks, boost confidence, and create beauty experiences that leave a lasting impression.</p>
+  <div style="position:relative;width:100%;max-width:900px;margin:0 auto;border-radius:4px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.5);border:1px solid rgba(201,169,110,.2);">
+    <div style="padding-top:56.25%;"></div>
+    <iframe
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+      src="https://www.youtube.com/embed/tM37vNcvOPo?rel=0&modestbranding=1&showinfo=0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy"
+      title="Yanshika Makeover Showcase">
+    </iframe>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery-title-wrap" style="padding-top:80px;">
+    <span class="section-tag">Our Work</span>
+    <h2 class="section-title">Studio <em>Gallery</em></h2>
+  </div>
+
+  <!-- ╔══════════════════════════════════════════════════╗
+       ║  📸 EASY IMAGE SWAP — EDIT ONLY THIS SECTION    ║
+       ║  Replace the src="..." URLs with your image     ║
+       ║  URLs downloaded from Google Business.          ║
+       ╚══════════════════════════════════════════════════╝ -->
+  <div class="gallery-slider-wrap">
+    <button class="gallery-arrow prev" aria-label="Previous" onclick="galleryMove(-1)">&#8592;</button>
+    <div class="gallery-slider" id="gallerySlider">
+
+      <!-- SLIDE 1 — change src to your image -->
+      <div class="gallery-slide">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80" alt="Gallery Image 1" width="1200" height="675"/>
+      </div>
+
+      <!-- SLIDE 2 — change src to your image -->
+      <div class="gallery-slide">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Gallery Image 2" width="1200" height="675" loading="lazy"/>
+      </div>
+
+      <!-- SLIDE 3 — change src to your image -->
+      <div class="gallery-slide">
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=80" alt="Gallery Image 3" width="1200" height="675" loading="lazy"/>
+      </div>
+
+      <!-- SLIDE 4 — change src to your image -->
+      <div class="gallery-slide">
+        <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=1200&q=80" alt="Gallery Image 4" width="1200" height="675" loading="lazy"/>
+      </div>
+
+    </div>
+    <button class="gallery-arrow next" aria-label="Next" onclick="galleryMove(1)">&#8594;</button>
+  </div>
+  <div class="gallery-dots" id="galleryDots"></div>
+</section>
+
+<!-- BOOKING / CONTACT -->
+<section class="booking" id="booking">
+  <div class="booking-left">
+    <span class="section-tag">Visit Us</span>
+    <h2 class="section-title">Book Your <em>Appointment</em></h2>
+    <p>Ready to look and feel your best? Reach us on WhatsApp, call us directly, or visit our Rohtak studio. Walk-ins welcome — appointments recommended for bridal bookings.</p>
+    <div class="contact-info">
+      <div class="contact-row">
+        <div class="contact-icon">📍</div>
+        <div>
+          <span class="contact-label">Address</span>
+          <span id="contact-address">Azad Garh Rd, Azad Garh, Rajendra Nagar</span><br>
+          <span id="contact-city">Rohtak, Haryana 124001</span>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">📞</div>
+        <div>
+          <span class="contact-label">Phone</span>
+          <a href="tel:+919350837392" style="color:rgba(255,255,255,.7);text-decoration:none;" id="contact-phone">+91 93508 37392</a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <span class="contact-label">Email</span>
+          <span id="contact-email">yanshikamakeover@gmail.com</span>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <span class="contact-label">Hours</span>
+          Mon–Sat: 9:00 AM – 7:00 PM<br>
+          Sunday: 9:00 AM – 7:00 PM
+        </div>
+      </div>
+    </div>
+    <div class="contact-action-btns">
+      <a href="https://wa.me/919350837392?text=Hi%20Yanshika%20Makeover!%20I%20would%20like%20to%20book%20an%20appointment." class="btn-wa" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      <a href="tel:+919350837392" class="btn-call">📞 Call Now</a>
+      <a href="https://share.google/ZU2SpgsQCgpIg26f0" class="btn-dir" target="_blank" rel="noopener">📍 Get Directions</a>
+    </div>
+  </div>
+  <div class="booking-form">
+    <h3>Reserve Your Slot</h3>
+    <div class="form-row">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" placeholder="Your Name"/>
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" placeholder="Last Name"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="tel" placeholder="+91 00000 00000"/>
+    </div>
+    <div class="form-group">
+      <label>Service</label>
+      <select>
+        <option>Hair Styling</option>
+        <option>Skin &amp; Facials</option>
+        <option>Nail Studio</option>
+        <option>Bridal Makeover</option>
+        <option>Waxing &amp; Threading</option>
+        <option>Makeup Studio</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date"/>
+      </div>
+      <div class="form-group">
+        <label>Time</label>
+        <select>
+          <option>9:00 AM</option>
+          <option>10:00 AM</option>
+          <option>11:00 AM</option>
+          <option>12:00 PM</option>
+          <option>2:00 PM</option>
+          <option>3:00 PM</option>
+          <option>4:00 PM</option>
+          <option>5:00 PM</option>
+          <option>6:00 PM</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn-book" onclick="bookViaWhatsApp(this.closest('.booking-form'))">💬 Book via WhatsApp</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo"><span id="footer-logo-name">Yanshika</span> Makeover</div>
+    <p>Rohtak's most-loved beauty parlour. Transforming looks, boosting confidence, one makeover at a time.</p>
+    <p style="margin-top:12px;font-size:12px;" id="footer-address">Azad Garh Rd, Rajendra Nagar, Rohtak, Haryana 124001</p>
+    <div class="footer-social">
+      <a href="https://wa.me/919350837392" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+      <a href="https://share.google/ZU2SpgsQCgpIg26f0" target="_blank" rel="noopener" title="Get Directions">📍</a>
+      <a href="tel:+919350837392" title="Call Us">📞</a>
+    </div>
+  </div>
+  <div>
+    <h4>Services</h4>
+    <ul>
+      <li><a href="#services">Hair Styling</a></li>
+      <li><a href="#services">Skin &amp; Facials</a></li>
+      <li><a href="#services">Nail Studio</a></li>
+      <li><a href="#services">Bridal Makeovers</a></li>
+      <li><a href="#services">Makeup Studio</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Studio</h4>
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#booking">Contact</a></li>
+      <li><a href="https://wa.me/919350837392" target="_blank" rel="noopener">WhatsApp</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Hours</h4>
+    <div class="hours-table">
+      <div class="hours-row"><span>Mon – Fri</span><span>9am – 7pm</span></div>
+      <div class="hours-row"><span>Saturday</span><span>9am – 7pm</span></div>
+      <div class="hours-row"><span>Sunday</span><span>9am – 7pm</span></div>
+    </div>
+    <div style="margin-top:20px;">
+      <a href="tel:+919350837392" style="color:var(--gold);text-decoration:none;font-size:15px;font-family:'Cormorant Garamond',serif;">+91 93508 37392</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span id="footer-copy">© 2025 Yanshika Makeover. All rights reserved. · Rohtak, Haryana</span>
+    <span>Made with ✦ for beauty</span>
+  </div>
+</footer>
+
+<!-- All non-critical JS deferred to end of body -->
+<script defer>
+(function() {
+  // ── Lazy-load off-screen service card backgrounds ──
+  if ('IntersectionObserver' in window) {
+    var imgObserver = new IntersectionObserver(function(entries, obs) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          if (el.dataset.bg) {
+            el.style.backgroundImage = "url('" + el.dataset.bg + "')";
+            delete el.dataset.bg;
+          }
+          obs.unobserve(el);
+        }
+      });
+    }, { rootMargin: '200px 0px' });
+    document.querySelectorAll('.service-card-bg[data-bg]').forEach(function(el) {
+      imgObserver.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.service-card-bg[data-bg]').forEach(function(el) {
+      el.style.backgroundImage = "url('" + el.dataset.bg + "')";
+    });
+  }
+
+  // ── Floating particles in hero ──
+  var cssBg = document.querySelector('.hero-css-bg');
+  if (cssBg) {
+    for (var i = 0; i < 22; i++) {
+      var p = document.createElement('div');
+      p.className = 'particle';
+      var size = Math.random() * 4 + 1.5;
+      p.style.cssText = 'width:' + size + 'px;height:' + size + 'px;left:' + (Math.random()*100) + '%;bottom:' + (Math.random()*20) + '%;animation-duration:' + (6 + Math.random()*10) + 's;animation-delay:' + (Math.random()*8) + 's;opacity:0;';
+      cssBg.appendChild(p);
+    }
+  }
+
+  // ── Scroll animations ──
+  var scrollObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card, .review-card').forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity .6s ease, transform .6s ease';
+    scrollObserver.observe(el);
+  });
+
+  // ── Gallery Slider ──
+  var wrap    = document.querySelector('.gallery-slider-wrap');
+  var slider  = document.getElementById('gallerySlider');
+  var dotsWrap = document.getElementById('galleryDots');
+  if (!slider) return;
+  var slides  = slider.querySelectorAll('.gallery-slide');
+  var total   = slides.length;
+  var current = 0;
+  var autoTimer;
+
+  slides.forEach(function(_, i) {
+    var d = document.createElement('button');
+    d.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i+1));
+    d.addEventListener('click', function() { goTo(i); resetAuto(); });
+    dotsWrap.appendChild(d);
+  });
+
+  function goTo(n) {
+    current = (n + total) % total;
+    slider.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dotsWrap.querySelectorAll('.gallery-dot').forEach(function(d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function resetAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(function() { goTo(current + 1); }, 4500);
+  }
+
+  window.galleryMove = function(dir) { goTo(current + dir); resetAuto(); };
+
+  // Touch swipe
+  var touchStartX = 0;
+  slider.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+  slider.addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) { goTo(current + (diff > 0 ? 1 : -1)); resetAuto(); }
+  }, { passive: true });
+
+  // Mouse drag
+  var dragStartX = 0, isDragging = false;
+  wrap.addEventListener('mousedown', function(e) {
+    dragStartX = e.clientX; isDragging = true;
+    slider.classList.add('is-dragging');
+    clearInterval(autoTimer);
+  });
+  window.addEventListener('mousemove', function(e) {
+    if (!isDragging) return;
+    var delta = dragStartX - e.clientX;
+    slider.style.transform = 'translateX(-' + ((current * 100) + (delta / wrap.offsetWidth * 100)) + '%)';
+  });
+  window.addEventListener('mouseup', function(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    slider.classList.remove('is-dragging');
+    var diff = dragStartX - e.clientX;
+    goTo(Math.abs(diff) > 60 ? current + (diff > 0 ? 1 : -1) : current);
+    resetAuto();
+  });
+  slider.addEventListener('mouseenter', function() { if (!isDragging) clearInterval(autoTimer); });
+  slider.addEventListener('mouseleave', function() { if (!isDragging) resetAuto(); });
+
+  resetAuto();
+})();
+</script>
+</body>
+</html>
